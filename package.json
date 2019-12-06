@@ -1,0 +1,19 @@
+{
+    "name": "webelapse",
+    "version": "1.0.0",
+    "author": "David Mezzetti",
+    "description": "Generate time-lapse video for a web page",
+    "license": "MIT",
+    "keywords": ["puppeteer", "ffmpeg", "time-lapse", "image", "video", "screenshot", "perceptual", "hash"],
+    "repository": "davidmezzetti/webelapse",
+    "dependencies": {
+        "commander": ">=4.0.1",
+        "imghash": ">=0.0.5",
+        "leven": ">=3.1.0",
+        "moment": ">=2.24.0",
+        "puppeteer": ">=2.0.0"
+    },
+    "bin": {
+        "webelapse": "./record.js"
+    }
+}
