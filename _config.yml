@@ -1,1 +1,4 @@
 theme: jekyll-theme-slate
+google_site_verification: X5Z_3jo9LhKOxxfEMQXGZ8717SGvsYAfbj4BaBErisg
+plugins:
+  - jekyll-sitemap
