@@ -29,6 +29,7 @@ const unlink = util.promisify(fs.unlink);
 argv.requiredOption("-o --output <output directory>", "Output directory (required)");
 argv.requiredOption("-u --url <url>", "URL to record (required)");
 argv.option("-b --bits <bits>", "Hash bits per row. Defaults to 12. Larger sizes are more sensitive to small image changes", parseInt);
+argv.option("-c --color <theme>", "Media color theme to set (light or dark). Defaults to light.");
 argv.option("-d --distance <distance>", "Edit distance between hashes to be considered a duplicate. Defaults to 0.", parseInt);
 argv.option("-e --encoding <output encoding", "Output file encoding. Defaults to mp4");
 argv.option("-f --frames <count>", "Number of frames to use for each video. If empty, will only generate video between active times.", parseInt);
@@ -159,6 +160,9 @@ async function frame(output) {
   else {
     await page.setViewport({width: 960, height: 720})
   }
+
+  // Set color scheme
+  await page.emulateMediaFeatures([{name: "prefers-color-scheme", value: argv.color === "dark" ? "dark" : "light"}]);
 
   // Wait for page to render before taking the screenshot
   await page.goto(argv.url, { waitUntil: "networkidle0", timeout: 60000});
