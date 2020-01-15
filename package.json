@@ -1,11 +1,11 @@
 {
     "name": "webelapse",
-    "version": "1.0.0",
-    "author": "David Mezzetti",
+    "version": "1.0.1",
+    "author": "NeuML",
     "description": "Generate time-lapse video for a web page",
     "license": "MIT",
     "keywords": ["puppeteer", "ffmpeg", "time-lapse", "image", "video", "screenshot", "perceptual", "hash"],
-    "repository": "davidmezzetti/webelapse",
+    "repository": "neuml/webelapse",
     "dependencies": {
         "commander": ">=4.0.1",
         "imghash": ">=0.0.5",
