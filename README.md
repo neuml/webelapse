@@ -3,7 +3,9 @@ webelapse: Generate time-lapse video for a website
 
 webelapse is a Node.js program that can be used to generate time-lapse video of a website. Possible use cases are helping to review/test/demo web application functionality before releasing to production or building screencasts of frequently updated websites.
 
-![demo](https://raw.githubusercontent.com/neuml/webelapse/master/demo.gif)
+<p align="center">
+    <img src="https://raw.githubusercontent.com/neuml/webelapse/master/demo.gif"/>
+</p>
 
 webelapse has the following features:
  - Generate time-lapse video for a given website/URL
