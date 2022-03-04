@@ -26,6 +26,7 @@ const writeFile = util.promisify(fs.writeFile);
 const unlink = util.promisify(fs.unlink);
 
 // Command line argument parsing
+argv.storeOptionsAsProperties()
 argv.requiredOption("-o --output <output directory>", "Output directory (required)");
 argv.requiredOption("-u --url <url>", "URL to record (required)");
 argv.option("-b --bits <bits>", "Hash bits per row. Defaults to 12. Larger sizes are more sensitive to small image changes", parseInt);
